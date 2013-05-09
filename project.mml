@@ -1,0 +1,135 @@
+{
+  "bounds": [
+    -79.1455,
+    -1.9552,
+    -66.8408,
+    13.0474
+  ],
+  "center": [
+    -72.4905,
+    6.4381,
+    9
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "paramos",
+    "template_teaser": "Páramo: <strong>{{{COMPLEJO}}}</strong>",
+    "fields": [
+      "COMPLEJO"
+    ]
+  },
+  "minzoom": 7,
+  "maxzoom": 10,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "labels.mss"
+  ],
+  "Layer": [
+    {
+      "id": "countries",
+      "name": "countries",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "geometry": "polygon",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
+        "type": "shape"
+      },
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -77.99116248404425,
+        0.5039111838042115,
+        -71.95941690292274,
+        11.001697018777174
+      ],
+      "id": "paramos",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/GIS-LAB/Dropbox/Datos disponibles/Colombia_Paramos_y_ecosistemas/complejos_ecosiavh_feb20.shp",
+        "id": "paramos",
+        "project": "mineria_en_paramos",
+        "srs": "",
+        "encoding": "ISO-8859-1"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {
+        "encoding": "ISO-8859-1"
+      },
+      "name": "paramos"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -78.63296401931972,
+        -0.9903841614026426,
+        -66.9470186614591,
+        11.854479668147842
+      ],
+      "id": "mineria",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/GIS-LAB/Dropbox/Datos disponibles/Colombia_TitulosMineros_Ingeominas_2012/Titulos Mineros Vigente (2012) No aplica.shp",
+        "id": "mineria",
+        "project": "mineria_en_paramos",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "mineria",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -77.81002654540805,
+        0.7843288306998268,
+        -72.38060771865686,
+        7.553462364562953
+      ],
+      "id": "overlap",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/GIS-LAB/Dropbox/CEELATMappingLab/MineriaParamosClip.shp",
+        "id": "overlap",
+        "project": "mineria_en_paramos",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "overlap"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.58997888396897,
+        -85.051,
+        179.38330358817018,
+        82.48332318035943
+      ],
+      "id": "labels",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/GIS-LAB/Dropbox/Datos disponibles/World_PopulatedPlaces/ne_10m_populated_places_simple.shp",
+        "encoding": "ISO-8859-1"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {
+        "encoding": "ISO-8859-1"
+      },
+      "name": "labels"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "ParamosMineria",
+  "description": "",
+  "attribution": "",
+  "legend": "<div class='my-legend'>\n<div class='legend-scale'>\n  <ul class='legend-labels'>\n    <li><span style='background:#ACD46C;'></span>Páramos</li>\n    <li><span style='background:#551F0A;'></span>Títulos Mineros Vigentes</li>\n    <li><span style='background:#FF3643;'></span>Títulos Mineros en Páramos</li>\n  </ul>\n</div>\n</div>\n\n<style type='text/css'>\n  .wax-legend .legend-scale ul {\n    margin: 0;\n    margin-bottom: 5px;\n    margin-top: 5px;\n    padding: 0;\n    float: left;\n    list-style: none;\n    }\n  .wax-legend .legend-scale ul li {\n    font-size: 100%;\n    list-style: none;\n    margin-left: 0;\n    line-height: 25px;\n    margin-bottom: 2px;\n    }\n  .wax-legend ul.legend-labels li span {\n    display: block;\n    float: left;\n    height: 25px;\n    width: 25px;\n    margin-right: 5px;\n    margin-left: 0;\n    }\n  .wax-legend a {\n    color: #777;\n    }\n</style>"
+}
